@@ -81,4 +81,19 @@ html {
   font-size: 18px;
   font-family: "Lato", "Lato-Black", sans-serif;
 }
+
+.phone {
+  width: 240px;
+  height: 483px;
+}
+
+.phone_vertical {
+  width: 240px;
+  height: 483px;
+}
+
+.phone_horizontal {
+  width: 483px;
+  height: 240px;
+}
 /*# sourceMappingURL=singolo1.css.map */
