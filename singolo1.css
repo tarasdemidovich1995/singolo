@@ -148,7 +148,7 @@ h3 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 42px 12px 43px;
+  padding: 0 40px 12px 40px;
 }
 
 .slider__phone {
@@ -175,7 +175,18 @@ h3 {
 }
 
 .arrow {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 27px;
+  width: 16px;
 }
 
 .arrow::after {
@@ -207,6 +218,11 @@ h3 {
 .arrow_right {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+  margin-left: 2.5px;
+}
+
+.arrow_left {
+  margin-left: 2.5px;
 }
 
 .arrow:hover {
