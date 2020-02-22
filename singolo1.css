@@ -352,13 +352,13 @@ h3 {
   margin-bottom: 30px;
 }
 
-.card {
+.service-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.card__left {
+.service-card__left {
   margin-top: 2px;
   margin-left: 1px;
   margin-right: 20px;
@@ -366,11 +366,11 @@ h3 {
       flex-shrink: 0;
 }
 
-.card__right h3 {
+.service-card__right h3 {
   margin-bottom: 10px;
 }
 
-.card__right p {
+.service-card__right p {
   font-size: 0.6rem;
   line-height: 1.1rem;
   text-align: justify;
