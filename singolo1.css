@@ -109,6 +109,7 @@ h1 {
 h2 {
   font-family: "Lato-Black", sans-serif;
   font-size: 1.5rem;
+  font-weight: 400;
   color: #666d89;
 }
 
@@ -121,21 +122,6 @@ h3 {
 .container {
   width: 1020px;
   margin: 0 auto;
-}
-
-.header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  background-color: #2d303a;
-  border-bottom: 6px solid #323746;
-  padding: 0 40px 32px 40px;
 }
 
 .link {
@@ -154,6 +140,70 @@ h3 {
 
 .link_active {
   color: #f06c64;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background-color: #2d303a;
+  border-bottom: 6px solid #323746;
+  padding: 0 40px 32px 40px;
+}
+
+.logo {
+  padding-top: 32px;
+}
+
+.logo h1 {
+  position: relative;
+}
+
+.logo .purple-letter {
+  color: #f06c64;
+  position: absolute;
+  top: 0px;
+  right: -8px;
+}
+
+.navigation__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1px;
+}
+
+.navigation__list-item {
+  margin-right: 28px;
+  position: relative;
+}
+
+.navigation__list-item::after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+  background-color: #434759;
+  position: absolute;
+  top: 60%;
+  right: -14px;
+}
+
+.navigation__list-item:last-child {
+  margin-right: 0;
+}
+
+.navigation__list-item:last-child::after {
+  display: none;
 }
 
 .slider {
@@ -253,55 +303,6 @@ h3 {
 
 .arrow:hover::before, .arrow:hover::after {
   background-color: #ffffff;
-}
-
-.logo {
-  padding-top: 32px;
-}
-
-.logo h1 {
-  position: relative;
-}
-
-.logo .purple-letter {
-  color: #f06c64;
-  position: absolute;
-  top: 0px;
-  right: -8px;
-}
-
-.navigation__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 1px;
-}
-
-.navigation__list-item {
-  margin-right: 28px;
-  position: relative;
-}
-
-.navigation__list-item::after {
-  content: "";
-  display: block;
-  width: 2px;
-  height: 2px;
-  border-radius: 50%;
-  -webkit-transform: translate(50%, 50%);
-          transform: translate(50%, 50%);
-  background-color: #434759;
-  position: absolute;
-  top: 60%;
-  right: -14px;
-}
-
-.navigation__list-item:last-child {
-  margin-right: 0;
-}
-
-.navigation__list-item:last-child::after {
-  display: none;
 }
 
 .our-services {

@@ -109,6 +109,7 @@ h1 {
 h2 {
   font-family: "Lato-Black", sans-serif;
   font-size: 1.5rem;
+  font-weight: 400;
   color: #666d89;
 }
 
@@ -121,5 +122,102 @@ h3 {
 .container {
   width: 1020px;
   margin: 0 auto;
+}
+
+.link {
+  font-family: 'Lato';
+  font-size: 0.6rem;
+  font-weight: bold;
+  letter-spacing: 0.01px;
+  line-height: 6.32px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.link:hover {
+  color: #f06c64;
+}
+
+.link_active {
+  color: #f06c64;
+}
+
+.button {
+  font-family: inherit;
+  font-size: 0.6rem;
+  line-height: 1rem;
+  font-weight: 400;
+  color: #767e9e;
+  background-color: #2d303a;
+  border: 1px solid #767e9e;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  padding: 0 6px 0 6px;
+}
+
+.button:hover {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.portfolio {
+  background-color: #2d303a;
+  padding: 62px 40px 65px 40px;
+  border-bottom: 6px solid #323746;
+}
+
+.portfolio__top {
+  margin-bottom: 17px;
+}
+
+.portfolio__top h2 {
+  margin-bottom: 27px;
+}
+
+.portfolio__top p {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.portfolio__filter {
+  margin-bottom: 19px;
+}
+
+.portfolio__filter-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 1px;
+}
+
+.portfolio__filter-list-item {
+  margin-right: 10px;
+  line-height: 0.5rem;
+}
+
+.portfolio__filter-list-item:first-child button {
+  padding-left: 7px;
+}
+
+.portfolio__projects-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.portfolio__projects-list-item {
+  margin-right: 20px;
+  margin-bottom: 18px;
+}
+
+.portfolio__projects-list-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.portfolio__projects-list-item:nth-last-child(-n + 4) {
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=singolo2.css.map */
