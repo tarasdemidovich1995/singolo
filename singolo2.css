@@ -251,6 +251,11 @@ h3 {
   padding-left: 7px;
 }
 
+.portfolio__projects {
+  height: 601px;
+  overflow: hidden;
+}
+
 .portfolio__projects-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -266,10 +271,6 @@ h3 {
 
 .portfolio__projects-list-item:nth-child(4n) {
   margin-right: 0;
-}
-
-.portfolio__projects-list-item:nth-last-child(-n + 4) {
-  margin-bottom: 0;
 }
 
 .about-us {
