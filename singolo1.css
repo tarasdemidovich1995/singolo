@@ -184,6 +184,42 @@ h3 {
           filter: brightness(1.5);
 }
 
+.link_contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.6rem;
+  line-height: 1.1rem;
+}
+
+.link_contacts::before {
+  display: block;
+  content: "";
+  width: 13px;
+  height: 13px;
+  background: url("./assets/images/get-a-quote/contacs.png") no-repeat;
+  margin-right: 10px;
+}
+
+.link_contacts_place::before {
+  background-position: 0 0;
+}
+
+.link_contacts_phone::before {
+  background-position: 0 -21px;
+}
+
+.link_contacts_email::before {
+  background-position: 0 -43px;
+}
+
+.link_contacts:hover {
+  opacity: 0.5;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;

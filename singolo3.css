@@ -184,6 +184,42 @@ h3 {
           filter: brightness(1.5);
 }
 
+.link_contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.6rem;
+  line-height: 1.1rem;
+}
+
+.link_contacts::before {
+  display: block;
+  content: "";
+  width: 13px;
+  height: 13px;
+  background: url("./assets/images/get-a-quote/contacs.png") no-repeat;
+  margin-right: 10px;
+}
+
+.link_contacts_place::before {
+  background-position: 0 0;
+}
+
+.link_contacts_phone::before {
+  background-position: 0 -21px;
+}
+
+.link_contacts_email::before {
+  background-position: 0 -43px;
+}
+
+.link_contacts:hover {
+  opacity: 0.5;
+}
+
 .button {
   cursor: pointer;
 }
@@ -210,5 +246,163 @@ h3 {
 .button_filter_active {
   color: #ffffff;
   border: 1px solid #ffffff;
+}
+
+.button_submit {
+  display: block;
+  width: 100%;
+  font-family: inherit;
+  font-size: 0.6rem;
+  line-height: 1rem;
+  color: #f48c8f;
+  padding: 5px 15px;
+  -webkit-box-shadow: inset 0px 1px 1px 0px #f2f2f2;
+          box-shadow: inset 0px 1px 1px 0px #f2f2f2;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #ca4549), to(#d6564f));
+  background: linear-gradient(to bottom, #ca4549 5%, #d6564f 100%);
+  background-color: #ca4549;
+  border-radius: 5px;
+  border-width: 0px;
+  cursor: pointer;
+  text-shadow: 0px 1px 0px #b23e35;
+}
+
+.button_submit:focus {
+  outline-width: 0px;
+}
+
+.button_submit:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #d6564f), to(#ca4549));
+  background: linear-gradient(to bottom, #d6564f 5%, #ca4549 100%);
+  background-color: #d6564f;
+}
+
+.button_submit:active {
+  position: relative;
+  top: 1px;
+}
+
+.get-a-quote {
+  color: #f0d8d9;
+  padding: 62px 40px 18px 40px;
+  background-color: #f06c64;
+  border-bottom: 6px solid #ea676b;
+}
+
+.get-a-quote__top h2 {
+  color: inherit;
+  margin-bottom: 21px;
+}
+
+.get-a-quote__top p {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+  text-align: justify;
+}
+
+.get-a-quote__bottom {
+  margin-top: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.get-a-quote__form {
+  width: 619px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.get-a-quote__contacts {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-left: 21px;
+}
+
+.get-a-quote__information {
+  margin-bottom: 20px;
+}
+
+.get-a-quote__information h3 {
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+  color: #f0d8d9;
+  margin-bottom: 10px;
+}
+
+.get-a-quote__information p {
+  font-size: 0.6rem;
+  line-height: 1.1rem;
+  font-weight: 400;
+  text-align: justify;
+  letter-spacing: -0.03px;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form__input, .form__textarea {
+  width: 100%;
+  color: #f48c8f;
+  font-family: inherit;
+  font-size: 0.6rem;
+  line-height: 1rem;
+  border-width: 0px;
+  border-radius: 5px;
+  padding: 9px 15px;
+  background-color: #d6564f;
+  margin-bottom: 16px;
+}
+
+.form__input::-webkit-input-placeholder, .form__textarea::-webkit-input-placeholder {
+  color: #f48c8f;
+}
+
+.form__input:-ms-input-placeholder, .form__textarea:-ms-input-placeholder {
+  color: #f48c8f;
+}
+
+.form__input::-ms-input-placeholder, .form__textarea::-ms-input-placeholder {
+  color: #f48c8f;
+}
+
+.form__input::placeholder, .form__textarea::placeholder {
+  color: #f48c8f;
+}
+
+.form__input:focus::-webkit-input-placeholder, .form__textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form__input:focus:-ms-input-placeholder, .form__textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form__input:focus::-ms-input-placeholder, .form__textarea:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form__input:focus::placeholder, .form__textarea:focus::placeholder {
+  color: transparent;
+}
+
+.form__input:focus, .form__textarea:focus {
+  outline-width: 0px;
+  background-color: #ca4549;
+}
+
+.form__textarea {
+  resize: none;
+  height: 202px;
+  margin-bottom: 18px;
 }
 /*# sourceMappingURL=singolo3.css.map */

@@ -184,6 +184,42 @@ h3 {
           filter: brightness(1.5);
 }
 
+.link_contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.6rem;
+  line-height: 1.1rem;
+}
+
+.link_contacts::before {
+  display: block;
+  content: "";
+  width: 13px;
+  height: 13px;
+  background: url("./assets/images/get-a-quote/contacs.png") no-repeat;
+  margin-right: 10px;
+}
+
+.link_contacts_place::before {
+  background-position: 0 0;
+}
+
+.link_contacts_phone::before {
+  background-position: 0 -21px;
+}
+
+.link_contacts_email::before {
+  background-position: 0 -43px;
+}
+
+.link_contacts:hover {
+  opacity: 0.5;
+}
+
 .button {
   cursor: pointer;
 }
@@ -210,6 +246,40 @@ h3 {
 .button_filter_active {
   color: #ffffff;
   border: 1px solid #ffffff;
+}
+
+.button_submit {
+  display: block;
+  width: 100%;
+  font-family: inherit;
+  font-size: 0.6rem;
+  line-height: 1rem;
+  color: #f48c8f;
+  padding: 5px 15px;
+  -webkit-box-shadow: inset 0px 1px 1px 0px #f2f2f2;
+          box-shadow: inset 0px 1px 1px 0px #f2f2f2;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #ca4549), to(#d6564f));
+  background: linear-gradient(to bottom, #ca4549 5%, #d6564f 100%);
+  background-color: #ca4549;
+  border-radius: 5px;
+  border-width: 0px;
+  cursor: pointer;
+  text-shadow: 0px 1px 0px #b23e35;
+}
+
+.button_submit:focus {
+  outline-width: 0px;
+}
+
+.button_submit:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #d6564f), to(#ca4549));
+  background: linear-gradient(to bottom, #d6564f 5%, #ca4549 100%);
+  background-color: #d6564f;
+}
+
+.button_submit:active {
+  position: relative;
+  top: 1px;
 }
 
 .portfolio {
