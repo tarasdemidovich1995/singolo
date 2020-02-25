@@ -1,1 +1,1 @@
-https://tarasdemidovich1995.github.io/singolo/
+[Link to task!](https://tarasdemidovich1995.github.io/singolo/)
