@@ -282,6 +282,13 @@ h3 {
   top: 1px;
 }
 
+.button_phone {
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0;
+}
+
 .header {
   background-color: #2d303a;
   border-bottom: 6px solid #323746;
@@ -368,7 +375,7 @@ h3 {
   padding: 53px 40px 6px 40px;
 }
 
-.slider__phone {
+.slider__carousel {
   width: 796px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -381,6 +388,10 @@ h3 {
           justify-content: space-between;
 }
 
+.phone {
+  position: relative;
+}
+
 .phone_vertical {
   width: 240px;
   height: 483px;
@@ -389,7 +400,77 @@ h3 {
 .phone_horizontal {
   width: 483px;
   height: 240px;
-  margin-bottom: 2px;
+  margin-top: -2px;
+}
+
+.phone__picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.phone__picture_vertical {
+  width: 216px;
+  height: 458px;
+  background-image: url("./assets/images/slider/phone_vertical.png");
+}
+
+.phone__picture_horizontal {
+  width: 458px;
+  height: 216px;
+  background-image: url("./assets/images/slider/phone_horizontal.png");
+}
+
+.phone__display {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.phone__display_vertical {
+  width: 188px;
+  height: 333px;
+  top: 65px;
+  left: 14.5px;
+  background-image: url("./assets/images/slider/phone_vertical_display.jpg");
+}
+
+.phone__display_horizontal {
+  width: 333px;
+  height: 188px;
+  top: 14px;
+  left: 60px;
+  background-image: url("./assets/images/slider/phone_horizontal_display.jpg");
+}
+
+.phone__button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.phone__button_vertical {
+  bottom: 8px;
+  left: 87px;
+}
+
+.phone__button_horizontal {
+  top: 87px;
+  left: 8px;
+}
+
+.phone__shadow {
+  width: 100%;
+  height: 100%;
+}
+
+.phone__shadow_vertical {
+  background-image: url("./assets/images/slider/phone_vertical_shadow.png");
+}
+
+.phone__shadow_horizontal {
+  background-image: url("./assets/images/slider/phone_horizontal_shadow.png");
 }
 
 .arrow {
@@ -449,6 +530,23 @@ h3 {
 
 .arrow:hover::before, .arrow:hover::after {
   background-color: #ffffff;
+}
+
+.carousel__field {
+  width: 100%;
+}
+
+.carousel__item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .our-services {

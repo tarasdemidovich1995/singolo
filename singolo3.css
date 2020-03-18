@@ -282,11 +282,21 @@ h3 {
   top: 1px;
 }
 
+.button_phone {
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0;
+}
+
 .get-a-quote {
   color: #f0d8d9;
-  padding: 62px 40px 19px 40px;
   background-color: #f06c64;
   border-bottom: 6px solid #ea676b;
+}
+
+.get-a-quote .container {
+  padding: 62px 40px 19px 40px;
 }
 
 .get-a-quote__top h2 {
@@ -407,7 +417,12 @@ h3 {
 }
 
 .footer {
+  background-color: #2d303a;
+}
+
+.footer .container {
   padding: 0 40px;
+  height: 76px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -417,8 +432,6 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 76px;
-  background-color: #2d303a;
 }
 
 .footer__left p {
