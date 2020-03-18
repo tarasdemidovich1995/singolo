@@ -291,6 +291,13 @@ h3 {
   height: 600px;
   border-bottom: 6px solid #ea676b;
   background-color: #f06c64;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.slider_blue {
+  background-color: #648BF0;
+  border-bottom-color: #6868fd;
 }
 
 .slider .container {
