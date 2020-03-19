@@ -1,67 +1,77 @@
-function slider(background, slides, buttonLeft, buttonRight) {
-    let n = 0;
-    let cooldown = false;
-    const length = slides.children.length;
+class Slider {
 
-    function move(direction) {
+    constructor(background, slides, buttonLeft, buttonRight) {
+        this.background = background;
+        this.slides = slides;
+        this.buttonLeft = buttonLeft;
+        this.buttonRight = buttonRight;
+        this.n = 0;
+        this.cooldown = false;
+        this.length = slides.children.length;
+
+        buttonLeft.onclick = this.leftHandler.bind(this);
+        buttonRight.onclick = this.rightHandler.bind(this);
+    }
+
+    move(direction) {
         switch (direction) {
             case 'right':
-                slides.style.transform = `translateX(-${(++n) * 100}%)`;
+                this.slides.style.transform = `translateX(-${(++this.n) * 100}%)`;
                 break;
             case 'left':
-                slides.style.transform = `translateX(-${(--n) * 100}%)`;
+                this.slides.style.transform = `translateX(-${(--this.n) * 100}%)`;
                 break;
         }
     }
 
-    function setCooldown() {
-        cooldown = true;
-        setTimeout(() => { cooldown = false }, 300);
+    setCooldown() {
+        this.cooldown = true;
+        setTimeout(() => { this.cooldown = false }, 300);
     }
 
-    function changeBackground() {
-        background.classList.toggle('slider_blue');
+    changeBackground() {
+        this.background.classList.toggle('slider_blue');
     }
 
-    buttonLeft.onclick = () => {
-        if (cooldown) return;
-        if (n <= length - 1 && n > 0) {
-            move('left');
-            setCooldown();
-            changeBackground();
+    leftHandler() {
+        if (this.cooldown) return;
+        if (this.n <= this.length - 1 && this.n > 0) {
+            this.move('left');
+            this.setCooldown();
+            this.changeBackground();
         } else {
-            slides.classList.remove('with-animation');
-            const movingSlide = slides.children[length - 1];
-            move('right');
-            slides.children[length - 1].remove();
-            slides.prepend(movingSlide);
+            this.slides.classList.remove('with-animation');
+            const movingSlide = this.slides.children[this.length - 1];
+            this.move('right');
+            this.slides.children[this.length - 1].remove();
+            this.slides.prepend(movingSlide);
             setTimeout(() => {
-                slides.classList.add('with-animation');
-                move('left');
-                changeBackground();
+                this.slides.classList.add('with-animation');
+                this.move('left');
+                this.changeBackground();
             }, 10);
-            setCooldown();
+            this.setCooldown();
         }
     }
 
-    buttonRight.onclick = () => {
-        if (cooldown) return;
-        if (n >= 0 && n < length - 1) {
-            move('right');
-            setCooldown();
-            changeBackground();
+    rightHandler() {
+        if (this.cooldown) return;
+        if (this.n >= 0 && this.n < this.length - 1) {
+            this.move('right');
+            this.setCooldown();
+            this.changeBackground();
         } else {
-            slides.classList.remove('with-animation');
-            const movingSlide = slides.children[0];
-            move('left');
-            slides.children[0].remove();
-            slides.append(movingSlide);
+            this.slides.classList.remove('with-animation');
+            const movingSlide = this.slides.children[0];
+            this.move('left');
+            this.slides.children[0].remove();
+            this.slides.append(movingSlide);
             setTimeout(() => {
-                slides.classList.add('with-animation');
-                move('right');
+                this.slides.classList.add('with-animation');
+                this.move('right');
             }, 10);
-            setCooldown();
-            changeBackground();
+            this.setCooldown();
+            this.changeBackground();
         }
     }
 }
@@ -71,4 +81,4 @@ const arrowLeft = document.querySelector('.arrow_left');
 const arrowRight = document.querySelector('.arrow_right');
 const background = document.querySelector('.slider');
 
-slider(background, slides, arrowLeft, arrowRight);
+const slider = new Slider(background, slides, arrowLeft, arrowRight);
