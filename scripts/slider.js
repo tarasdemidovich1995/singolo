@@ -9,8 +9,9 @@ export default class Slider {
         this.cooldown = false;
         this.length = slides.children.length;
 
-        buttonLeft.onclick = this.leftHandler.bind(this);
-        buttonRight.onclick = this.rightHandler.bind(this);
+        this.slides.onclick = this.screenHandler.bind(this);
+        this.buttonLeft.onclick = this.leftHandler.bind(this);
+        this.buttonRight.onclick = this.rightHandler.bind(this);
     }
 
     move(direction) {
@@ -31,6 +32,8 @@ export default class Slider {
 
     changeBackground() {
         this.background.classList.toggle('slider_blue');
+        this.buttonLeft.classList.toggle('arrow_blue');
+        this.buttonRight.classList.toggle('arrow_blue');
     }
 
     leftHandler() {
@@ -73,5 +76,13 @@ export default class Slider {
             this.setCooldown();
             this.changeBackground();
         }
+    }
+
+    screenHandler(event) {
+        if (event.target.tagName != 'BUTTON') return;
+        const button = event.target;
+        const screenClass = button.id.match(/(?<=button\-)\w*/g).toString();
+        const screen = this.slides.querySelector(`.${screenClass}`);
+        screen.classList.toggle('phone__display_vertical_off');
     }
 }

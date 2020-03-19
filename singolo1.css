@@ -413,6 +413,10 @@ main {
   left: 13px;
 }
 
+.phone__display_vertical_off {
+  display: none;
+}
+
 .phone__display_horizontal {
   width: 333px;
   height: 188px;
@@ -490,6 +494,10 @@ main {
           transform-origin: 5px bottom;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+.arrow_blue::after, .arrow_blue::before {
+  background-color: #6868fd;
 }
 
 .arrow_right {
