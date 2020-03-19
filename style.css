@@ -150,11 +150,20 @@ h3 {
   display: block;
   width: 220px;
   height: 187px;
+  position: relative;
+  z-index: 3;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border: 0px solid #f06c64;
 }
 
 .link_project img {
   width: 100%;
   height: 100%;
+}
+
+.link_project_active {
+  border-width: 5px;
 }
 
 .link_social {

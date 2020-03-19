@@ -1,5 +1,6 @@
 import Slider from './scripts/slider.js';
 import Navigation from './scripts/navigation.js';
+import Portfolio from './scripts/portfolio.js';
 
 const slides = document.querySelector('.carousel__slides');
 const arrowLeft = document.querySelector('.arrow_left');
@@ -14,3 +15,9 @@ const sections = document.querySelectorAll('section');
 
 const navigation = new Navigation(navList, sections);
 window.navigation = navigation;
+
+const filterList = document.querySelector('.portfolio__filter-list');
+const projectsList = document.querySelector('.portfolio__projects-list');
+
+const portfolio = new Portfolio(filterList, projectsList);
+window.portfolio = portfolio;
