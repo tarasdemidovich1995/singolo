@@ -1,0 +1,36 @@
+.form {
+    display: flex;
+    flex-direction: column;
+
+    &__input, &__textarea {
+        width: 100%;
+        color: $textColor6;
+        font-family: inherit;
+        font-size: 0.6rem;
+        line-height: 1rem;
+        border-width: 0px;
+        border-radius: 5px;
+        padding: 9px 15px;
+        background-color: $backgroundColor10;
+        margin-bottom: 16px;
+        
+        &::placeholder {
+            color: $textColor6;
+        }
+        
+        &:focus::placeholder {
+            color: transparent;
+        }
+        
+        &:focus {
+            outline-width: 0px;
+            background-color: $backgroundColor4;
+        }
+    }
+    
+    &__textarea {
+        resize: none;
+        height: 202px;
+        margin-bottom: 18px;
+    }
+}

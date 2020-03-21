@@ -1,0 +1,20 @@
+.header {
+    background-color: $backgroundColor1;
+    border-bottom: 6px solid $backgroundColor2;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 0 40px 32px 40px;
+    }
+}
+
+main {
+    margin-top: 95px;
+}

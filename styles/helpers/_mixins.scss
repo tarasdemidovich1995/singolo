@@ -1,0 +1,50 @@
+@mixin listItem($cols, $margin) {
+    
+    margin-right: $margin;
+    margin-bottom: $margin;
+    width: ((100% - (($cols - 1) * $margin)) / $cols);
+        
+    &:nth-child(#{$cols}n) {
+        margin-right: 0;
+    }
+
+}
+
+@mixin triangle($direction, $width, $height, $color) {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+  
+    @if $direction == top {
+      border-width: 0 $width $height $width;
+      border-bottom-color: $color;
+    } @else if $direction == bottom {
+      border-width: $height $width 0 $width;
+      border-top-color: $color;
+    } @else if $direction == right {
+      border-width: $height 0 $height $width;
+      border-left-color: $color;
+    } @else if $direction == left {
+      border-width: $height $width $height 0;
+      border-right-color: $color;
+    }
+}
+
+@mixin media-min($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin media-max($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin media-lock($width-min, $width-max) {
+  @media only screen and (min-width: #{$width-min}) and (max-width: #{$width-max}) {
+    @content;
+  }
+}

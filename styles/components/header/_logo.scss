@@ -1,0 +1,14 @@
+.logo {
+    padding-top: 32px;
+
+    h1 {
+        position: relative;
+    }
+
+    .purple-letter {
+        color: $textColor4;
+        position: absolute;
+        top: 0px;
+        right: -8px;
+    }
+}

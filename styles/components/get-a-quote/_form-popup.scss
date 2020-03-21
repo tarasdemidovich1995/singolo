@@ -1,0 +1,72 @@
+.form-popup {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: none;
+
+    h3 {
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    &__message {
+        width: 300px;
+        background-color: $backgroundColor7;
+        border: 2px solid $backgroundColor8;
+        border-radius: 20px;
+        padding: 20px;
+        position: relative;
+        transform: scale(0);
+        transition: all 0.5s;
+        
+        &_show {
+            transform: scale(1);
+        }
+    }
+
+    &__headline {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    &__topic {
+        margin-bottom: 10px;
+        p {
+            margin-top: 5px;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &__description {
+        p {
+            margin-top: 5px;
+            text-align: justify;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    
+    &__close-button {
+        position: absolute;
+        transform: translate(50%, -50%);
+        top: 0;
+        right: 0;
+    }
+
+    &_show {
+        display: flex;
+    }
+}

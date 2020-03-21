@@ -1,0 +1,104 @@
+.link {
+    cursor: pointer;
+
+    &_nav {
+        font-family: 'Lato';
+        font-size: 0.6rem;
+        font-weight: bold;
+        line-height: 6.32px;
+        text-transform: uppercase;
+        color: $textColor3;
+
+
+        &:hover {
+            color: $textColor4;
+        }
+    
+        &_active {
+            color: $textColor4;
+        }
+    }
+
+    &_project {
+        display: block;
+        width: 220px;
+        height: 187px;
+        position: relative;
+        transition: all 0.2s;
+        border: 0px solid $backgroundColor3;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        &_active {
+            border-width: 5px;
+        }
+    }
+
+    &_social {
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-image: url('./assets/images/about-us/Social_Media.png');
+        
+        &_facebook {
+            background-position: 0 0;
+        }
+
+        &_google {
+            background-position: -40px 0;
+        }
+
+        &_twitter {
+            background-position: -80px 0;
+        }
+
+        &_linkedin {
+            background-position: -120px 0;
+        }
+
+        &:hover {
+            filter: brightness(1.5);
+        }
+    }
+
+    &_contacts {
+        display: flex;
+        align-items: center;
+        font-size: 0.6rem;
+        line-height: 1.1rem;
+
+        &::before {
+            display: block;
+            content: "";
+            width: 13px;
+            height: 13px;
+            background: url('./assets/images/get-a-quote/contacs.png') no-repeat;
+            margin-right: 10px;
+        }
+        
+        &_place {
+            &::before {
+                background-position: 0 0;
+            }
+        }
+
+        &_phone {
+            &::before {
+                background-position: 0 -21px;
+            }
+        }
+
+        &_email {
+            &::before {
+                background-position: 0 -43px;
+            }
+        }
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}

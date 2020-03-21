@@ -1,0 +1,51 @@
+.arrow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 27px;
+    width: 16px;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 5px;
+        background-color: $backgroundColor4;
+        border-radius: 2.5px;
+        transform-origin: 5px top;
+        transform: rotate(45deg);
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 5px;
+        background-color: $backgroundColor4;
+        border-radius: 2.5px;
+        transform-origin: 5px bottom;
+        transform: rotate(-45deg);
+    }
+
+    &_blue {
+        &::after, &::before {
+            background-color: rgb(104, 104, 253);
+        }
+    }
+
+    &_right {
+        transform: rotate(180deg);
+        margin-left: 2.5px;
+    }
+
+    &_left {
+        margin-left: 2.5px;
+    }
+
+    &:hover {
+        cursor: pointer;
+        &::before, &::after {
+            background-color: $backgroundColor5;
+        }
+    }
+}

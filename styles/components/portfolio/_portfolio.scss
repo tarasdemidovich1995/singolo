@@ -1,0 +1,62 @@
+.portfolio {
+    background-color: $backgroundColor1;
+    border-bottom: 6px solid $backgroundColor2;
+    
+    .container {
+        padding: 62px 40px 67px 40px;
+    }
+
+    &__top {
+        margin-bottom: 17px;
+
+        h2 {
+            margin-bottom: 27px;
+        }
+
+        p {
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+    }
+
+    &__bottom {
+    }
+
+    &__filter {
+        margin-bottom: 19px;
+    }
+    
+    &__filter-list {
+        display: flex;
+        margin-left: 1px;
+    }
+
+    &__filter-list-item {
+        margin-right: 10px;
+        line-height: 0.5rem;
+        &:first-child {
+            button {
+                padding-left: 7px;
+            }
+        }
+    }
+
+    &__projects {
+        height: 601px;
+        overflow: hidden;
+    }
+
+    &__projects-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__projects-list-item {
+        margin-right: 20px;
+        margin-bottom: 20px;
+
+        &:nth-child(4n) {
+            margin-right: 0;
+        }
+    }
+}
