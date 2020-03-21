@@ -377,14 +377,16 @@
                 </div>
                 <div class="get-a-quote__bottom">
                     <div class="get-a-quote__form">
-                        <form action="/" class="form">
+                        <form id="form" action="/" class="form">
                             <input class="form__input" type="text" name="name" placeholder="Name (Required)"
                                 autocomplete="off" required>
                             <input class="form__input" type="email" name="email" placeholder="Email (Required)"
                                 autocomplete="off" required>
-                            <input class="form__input" type="text" name="subject" placeholder="Subject">
+                            <input class="form__input" type="text" name="subject" placeholder="Subject"
+                                autocomplete="off">
                             <textarea class="form__textarea" name="description"
-                                placeholder="Describe your project in detail..."></textarea>
+                                placeholder="Describe your project in detail..." maxlength="400"
+                                autocomplete="off"></textarea>
                             <button class="button button_submit" type="submit">Send</button>
                         </form>
                     </div>
@@ -417,6 +419,22 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="form-popup">
+            <div class="form-popup__message">
+                <div class="form-popup__headline">
+                    <h3>Письмо отправлено</h3>
+                </div>
+                <div class="form-popup__topic">
+                    <h3>Тема:</h3>
+                    <p id="subject"></p>
+                </div>
+                <div class="form-popup__description">
+                    <h3>Описание:</h3>
+                    <p id="description"></p>
+                </div>
+                <button class="form-popup__close-button button button_close-popup"></button>
             </div>
         </section>
     </main>

@@ -151,7 +151,6 @@ h3 {
   width: 220px;
   height: 187px;
   position: relative;
-  z-index: 3;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border: 0px solid #f06c64;
@@ -297,6 +296,55 @@ h3 {
   height: 100%;
   display: block;
   opacity: 0;
+}
+
+.button_close-popup {
+  display: block;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  border: 2px solid #434759;
+  position: relative;
+  overflow: hidden;
+}
+
+.button_close-popup::before, .button_close-popup::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 31px;
+  background-color: #f06c64;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  position: absolute;
+  top: 4px;
+  left: 17px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.button_close-popup::before {
+  -webkit-transform: rotate(45deg) scale(0.9);
+          transform: rotate(45deg) scale(0.9);
+}
+
+.button_close-popup::after {
+  -webkit-transform: rotate(-45deg) scale(0.9);
+          transform: rotate(-45deg) scale(0.9);
+}
+
+.button_close-popup:hover::before {
+  -webkit-transform: rotate(45deg) scale(1.1);
+          transform: rotate(45deg) scale(1.1);
+}
+
+.button_close-popup:hover::after {
+  -webkit-transform: rotate(-45deg) scale(1.1);
+          transform: rotate(-45deg) scale(1.1);
+}
+
+.button_close-popup:focus {
+  outline-width: 0;
 }
 
 .header {
@@ -974,6 +1022,90 @@ main {
   resize: none;
   height: 202px;
   margin-bottom: 18px;
+}
+
+.form-popup {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(128, 128, 128, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: none;
+}
+
+.form-popup h3 {
+  font-weight: bold;
+}
+
+.form-popup p {
+  font-size: 0.8rem;
+}
+
+.form-popup__message {
+  width: 300px;
+  background-color: #f2f2f2;
+  border: 2px solid #434759;
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.form-popup__message_show {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.form-popup__headline {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.form-popup__topic {
+  margin-bottom: 10px;
+}
+
+.form-popup__topic p {
+  margin-top: 5px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.form-popup__description p {
+  margin-top: 5px;
+  text-align: justify;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.form-popup__close-button {
+  position: absolute;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  top: 0;
+  right: 0;
+}
+
+.form-popup_show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .footer {
