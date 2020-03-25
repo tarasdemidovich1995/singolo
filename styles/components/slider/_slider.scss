@@ -4,6 +4,10 @@
     background-color: $backgroundColor3;
     transition: all 0.3s;
 
+    @include media-max(1020px) {
+        height: 450px;
+    }
+
     &_blue {
         background-color: #648BF0;
         border-bottom-color: rgb(104, 104, 253);
@@ -14,12 +18,20 @@
         align-items: center;
         justify-content: space-between;
         padding: 53px 40px 6px 40px;
+
+        @include media-max(1020px) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
     }
     
     &__carousel {
-        width: 796px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        margin: 0 40px;
+        max-width: 796px;
+
+        @include media-max(1020px) {
+            max-width: 600px;
+            margin: 0 30px;
+        }
     }
 }

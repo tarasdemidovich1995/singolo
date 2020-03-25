@@ -44,6 +44,10 @@
     &__projects {
         height: 601px;
         overflow: hidden;
+
+        @include media-max(1000px) {
+            height: 790px;
+        }
     }
 
     &__projects-list {
@@ -52,11 +56,25 @@
     }
 
     &__projects-list-item {
-        margin-right: 20px;
-        margin-bottom: 20px;
+        
+        @include media-min(1001px) {
+            margin-right: calc((100% - 220px * 4) / 3);
+            margin-bottom: calc((100% - 220px * 4) / 3);
+            &:nth-child(4n) {
+                margin-right: 0;
+            }
+        }
 
-        &:nth-child(4n) {
-            margin-right: 0;
+        @include media-max(1001px) {
+
+            margin-right: 14px;
+            margin-bottom: 14px;
+            &:nth-child(3n + 1) {
+                margin-left: auto;
+            }
+            &:nth-child(3n) {
+                margin-right: auto;
+            }
         }
     }
 }

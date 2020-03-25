@@ -4,6 +4,7 @@
     justify-content: center;
     height: 27px;
     width: 16px;
+    flex-shrink: 0;
 
     &::after {
         content: "";
@@ -35,11 +36,6 @@
 
     &_right {
         transform: rotate(180deg);
-        margin-left: 2.5px;
-    }
-
-    &_left {
-        margin-left: 2.5px;
     }
 
     &:hover {

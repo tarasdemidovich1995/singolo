@@ -6,6 +6,11 @@
         width: 240px;
         height: 483px;
 
+        @include media-max(1020px) {
+            width: 181px;
+            height: 364px;
+        }
+
         &_slide2 {
             &::before, &::after {
                 content: '';
@@ -15,14 +20,28 @@
                 background-image: url('./assets/images/slider/small_phone.png');
                 position: absolute;
                 top: 50%;
+
+                @include media-max(1020px) {
+                    width: 117px;
+                    height: 236px;
+                    background-image: url('./assets/images/slider/small_phone_768px.png');
+                }
             }
             &::before {
                 transform: translate(-100%, -50%);
                 left: 16px;
+
+                @include media-max(1020px) {
+                    left: 12px;
+                }
             }
             &::after {
                 transform: translate(100%, -50%);
                 right: 25px;
+
+                @include media-max(1020px) {
+                    right: 19px;
+                }
             }
         }
     }
@@ -31,6 +50,11 @@
         width: 483px;
         height: 240px;
         margin-top: -2px;
+
+        @include media-max(1020px) {
+            width: 364px;
+            height: 181px;
+        }
     }
 
     &__picture {
@@ -43,12 +67,24 @@
             width: 216px;
             height: 458px;
             background-image: url('./assets/images/slider/phone_vertical.png');
+
+            @include media-max(1020px) {
+                width: 162px;
+                height: 344px;
+                background-image: url('./assets/images/slider/phone_vertical_768px.png');
+            }
         }
 
         &_horizontal {
             width: 458px;
             height: 216px;
             background-image: url('./assets/images/slider/phone_horizontal.png');
+
+            @include media-max(1020px) {
+                width: 344px;
+                height: 162px;
+                background-image: url('./assets/images/slider/phone_horizontal_768px.png');
+            }
         }
     }
 
@@ -62,14 +98,31 @@
             height: 333px;
             top: 65px;
             left: 14.5px;
+
+            @include media-max(1020px) {
+                width: 141px;
+                height: 251px;
+                top: 49px;
+                left: 11px;
+            }
             
             &_slide1 {
                 background-image: url('./assets/images/slider/phone_vertical_display_slide1.jpg');
+
+                @include media-max(1020px) {
+                    background-image: url('./assets/images/slider/phone_vertical_display_slide1_768px.jpg');
+                    background-position: -1px -1px;
+                }
             }
 
             &_slide2 {
                 background-image: url('./assets/images/slider/phone_vertical_display_slide2.jpg');
                 left: 13px;
+
+                @include media-max(1020px) {
+                    background-image: url('./assets/images/slider/phone_vertical_display_slide2_768px.jpg');
+                    left: 11px;
+                }
             }
 
             &_off {
@@ -83,6 +136,15 @@
             top: 14px;
             left: 60px;
             background-image: url('./assets/images/slider/phone_horizontal_display.jpg');
+
+            @include media-max(1020px) {
+                width: 251px;
+                height: 141px;
+                top: 11px;
+                left: 45px;
+                background-image: url('./assets/images/slider/phone_horizontal_display_768px.jpg');
+                background-position: -1px -1px;
+            }
         }
     }
 
@@ -92,14 +154,29 @@
         border-radius: 50%;
         position: absolute;
 
+        @include media-max(1020px) {
+            width: 32px;
+            height: 32px;
+        }
+
         &_vertical {
             bottom: 8px;
             left: 87px;
+
+            @include media-max(1020px) {
+                left: 65px;
+                bottom: 6px;
+            }
         }
 
         &_horizontal {
             top: 87px;
             left: 8px;
+
+            @include media-max(1020px) {
+                top: 65px;
+                left: 6px;
+            }
         }
     }
 
@@ -108,9 +185,17 @@
         height: 100%;
         &_vertical {
             background-image: url('./assets/images/slider/phone_vertical_shadow.png');
+
+            @include media-max(1020px) {
+                background-image: url('./assets/images/slider/phone_vertical_shadow_768px.png');
+            }
         }
         &_horizontal {
             background-image: url('./assets/images/slider/phone_horizontal_shadow.png');
+
+            @include media-max(1020px) {
+                background-image: url('./assets/images/slider/phone_horizontal_shadow_768px.png');
+            }
         }
     }
 }
