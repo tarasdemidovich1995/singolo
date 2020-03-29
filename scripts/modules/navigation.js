@@ -1,7 +1,6 @@
 export default class Navigation {
     constructor(navList, sections, burgerButton) {
         this.navList = navList;
-        this.navHeight = window.innerWidth >= 768 ? 95 : 71;
         this.cooldown = false;
         this.timerID = null;
         this.sections = sections;
@@ -16,8 +15,9 @@ export default class Navigation {
 
     getSectionsCoords() {
         const coords = new Map([['home', 0]]);
+        const height = window.innerWidth >= 768 ? 95 : 71;
         this.sections.forEach(element => {
-            if (element.id) coords.set(element.id, element.offsetTop - this.navHeight);
+            if (element.id) coords.set(element.id, element.offsetTop - height);
         });
         return coords;
     }
