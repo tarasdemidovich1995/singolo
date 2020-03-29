@@ -41,7 +41,12 @@
 	    background-color: #FBC65F;
 	    border-radius:5px;
 	    border-width: 0px;
-	    cursor:pointer; 
+        cursor:pointer; 
+        
+        @include media-max(767px) {
+            width: 100%;
+            height: 50px;
+        }
 
         &:focus {
             outline-width: 0px;
@@ -101,6 +106,21 @@
 
         &:focus {
             outline-width: 0;
+        }
+    }
+
+    &_burger {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: transparent url('./assets/images/header/Burger-menu-icon.png');
+        border-width: 0;
+
+        transition: all 0.5s;
+        transform-origin: 50% 50%;
+
+        &_active {
+            transform: rotate(90deg);
         }
     }
 }

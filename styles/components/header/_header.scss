@@ -8,15 +8,52 @@
     z-index: 3;
     height: 95px;
     
-    
     .container {
+        height: 100%;
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
-        padding: 0 40px 32px 40px;
+        align-items: center;
+        padding: 0 40px;
+
+        @include media-max(767px) {
+            justify-content: flex-start;
+            padding: 0 20px;
+        }
+    }
+
+    &__right {
+        @include media-max(767px) {
+            &_show {
+                position: absolute;
+                width: 100vw;
+                height: 100vh;
+                top: 0;
+                left: 0;
+                background-color: $backgroundColor11;
+            }
+        }
+    }
+
+    &__left {
+        @include media-max(767px) {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+    }
+
+    @include media-max(767px) {
+        height: 71px;
+        border-width: 0;
     }
 }
 
 main {
     margin-top: 95px;
+
+    @include media-max(767px) {
+        margin-top: 71px;
+    }
 }

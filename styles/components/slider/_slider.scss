@@ -8,6 +8,10 @@
         height: 450px;
     }
 
+    @include media-max(767px) {
+        height: 220px;
+    }
+
     &_blue {
         background-color: #648BF0;
         border-bottom-color: rgb(104, 104, 253);
@@ -17,12 +21,22 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 53px 40px 6px 40px;
-
+        padding: 0 40px;
+        height: 100%;
+        
         @include media-max(1020px) {
-            padding-left: 30px;
-            padding-right: 30px;
+            padding: 0 30px;
         }
+
+        @include media-max(767px) {
+            padding: 0 10px;
+        }
+
+        @include media-max(375px) {
+            position: relative;
+            justify-content: center;
+        }
+
     }
     
     &__carousel {
@@ -32,6 +46,15 @@
         @include media-max(1020px) {
             max-width: 600px;
             margin: 0 30px;
+        }
+
+        @include media-max(767px) {
+            max-width: 275px;
+            margin: 0 10px;
+        }
+
+        @include media-max(375px) {
+            margin: 0;
         }
     }
 }

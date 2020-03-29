@@ -1,0 +1,13 @@
+.nav-burger {
+    display: none;
+    width: 25px;
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+
+    @include media-max(767px) {
+        display: block;
+    }
+}

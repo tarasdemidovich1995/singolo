@@ -1,10 +1,15 @@
 export default class Navigation {
-    constructor(navList, sections) {
+    constructor(navList, sections, burgerButton) {
         this.navList = navList;
-        this.navHeight = 95;
+        this.navHeight = window.innerWidth >= 768 ? 95 : 71;
         this.cooldown = false;
         this.timerID = null;
         this.sectionsCoords = this.getSectionsCoords(sections);
+        this.burgerButton = burgerButton;
+        this.navigation = this.navList.parentElement;
+        this.popup = this.navigation.parentElement;
+
+        this.burgerButton.onclick = this.burgerHandler.bind(this);
         this.navList.onclick = this.clickHandler.bind(this);
         window.onscroll = this.scrollHandler.bind(this);
     }
@@ -59,5 +64,19 @@ export default class Navigation {
         const link = this.navList.querySelector(`[href="#${section}"]`);
         this.removeActiveStyle();
         link.classList.add('link_nav_active');
+    }
+
+    burgerHandler() {
+        if (this.navigation.classList.contains('navigation_show')) {
+            this.burgerButton.classList.toggle('button_burger_active');
+            this.navigation.classList.toggle('navigation_show');
+            setTimeout(() => {
+                this.popup.classList.toggle('header__right_show');
+            }, 500);
+        } else {
+            this.burgerButton.classList.toggle('button_burger_active');
+            this.navigation.classList.toggle('navigation_show');
+            this.popup.classList.toggle('header__right_show');
+        }
     }
 }

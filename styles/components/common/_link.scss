@@ -9,6 +9,10 @@
         text-transform: uppercase;
         color: $textColor3;
 
+        @include media-max(767px) {
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+        }
 
         &:hover {
             color: $textColor4;
@@ -22,14 +26,16 @@
     &_project {
         display: block;
         width: 220px;
-        height: 187px;
         position: relative;
         transition: all 0.2s;
         border: 0px solid $backgroundColor3;
 
+        @include media-max(767px) {
+            width: 150px;
+        }
+
         img {
             width: 100%;
-            height: 100%;
         }
 
         &_active {

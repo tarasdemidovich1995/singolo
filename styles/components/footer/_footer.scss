@@ -7,6 +7,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include media-max(767px) {
+            justify-content: center;
+        }
     }
 
     &__left {
@@ -17,6 +21,10 @@
             letter-spacing: -0.2px;
             margin-left: 2px;
         }
+
+        @include media-max(767px) {
+            display: none;
+        }
     }
 
     &__social-list {
@@ -25,5 +33,9 @@
 
     &__social-list-item {
         margin-left: 8px;
+
+        &:first-child {
+            margin-left: 0;
+        }
     }
 }

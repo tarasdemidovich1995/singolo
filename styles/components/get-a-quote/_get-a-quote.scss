@@ -5,6 +5,10 @@
     
     .container {
         padding: 62px 40px 58px 40px;
+
+        @include media-max(767px) {
+            padding: 40px 30px 34px 30px;
+        }
     }
 
     &__top {
@@ -24,16 +28,30 @@
     &__bottom {
         margin-top: 44px;
         display: flex;
+
+        @include media-max(767px) {
+            margin-top: 28px;
+            flex-direction: column;
+        }
     }
 
     &__form {
         width: calc((100% - 20px) / 3 * 2); 
         flex-shrink: 0;
+
+        @include media-max(767px) {
+            width: 100%;
+        }
     }
 
     &__contacts {
         flex-grow: 1;
         margin-left: 20px;
+
+        @include media-max(767px) {
+            margin-left: 0;
+            margin-top: 30px;
+        }
     }
 
     &__information {
@@ -51,16 +69,5 @@
             text-align: justify;
             letter-spacing: -0.03px;
         }
-    }
-
-    &__links {
-
-    }
-
-    &__links-list {
-
-    }
-
-    &__links-list-item {
     }
 }

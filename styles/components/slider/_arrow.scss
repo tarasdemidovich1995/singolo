@@ -15,6 +15,7 @@
         border-radius: 2.5px;
         transform-origin: 5px top;
         transform: rotate(45deg);
+
     }
 
     &::before {
@@ -28,6 +29,20 @@
         transform: rotate(-45deg);
     }
 
+    @include media-max(375px) {
+        position: absolute;
+        top: 50%;
+        
+        &:first-of-type {
+            transform: translateY(-50%) scale(0.8);
+            left: 5px;
+        }
+
+        &:last-of-type {
+            right: 5px;
+        }
+    }
+
     &_blue {
         &::after, &::before {
             background-color: rgb(104, 104, 253);
@@ -36,6 +51,10 @@
 
     &_right {
         transform: rotate(180deg);
+
+        @include media-max(375px) {
+            transform: rotate(180deg) translateY(50%) scale(0.8);
+        }
     }
 
     &:hover {

@@ -4,7 +4,14 @@
     
     .container {
         padding: 62px 40px 59px 40px;
+        
+        @include media-max(1020px) {
+            padding-top: 42px;
+        }
 
+        @include media-max(767px) {
+            padding: 40px 30px 34px 30px;
+        }
     }
 
     &__top {

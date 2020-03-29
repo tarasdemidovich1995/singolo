@@ -1,7 +1,22 @@
 .navigation {
+    transition: all .5s;
+
     &__list {
         display: flex;
-        margin-bottom: 1px;
+
+        @include media-max(767px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__logo {
+        @include media-min(768px) {
+            display: none;
+        }
+        position: absolute;
+        top: 35px;
+        left: 70px;
     }
 
     &__list-item {
@@ -28,7 +43,30 @@
             }
         }
 
+        @include media-max(767px) {
+            margin-bottom: 27px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
 
+    @include media-max(767px) {
+        background-color: $backgroundColor1;
+        height: 100vh;
+        width: 280px;
+        padding-left: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
 
+        &_show {
+            transform: translateY(0);
+        }
+    }
 }

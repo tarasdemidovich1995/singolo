@@ -4,6 +4,10 @@
     
     .container {
         padding: 62px 40px 67px 40px;
+
+        @include media-max(767px) {
+            padding: 40px 30px 39px 30px;
+        }
     }
 
     &__top {
@@ -21,13 +25,28 @@
 
     &__list {
         display: flex;
+
+        @include media-max(767px) {
+            flex-direction: column;
+        }
     }
 
     &__list-item {
-        width: calc((100% - 40px) / 3);
-        margin-right: 20px;
-        &:last-child {
-            margin-right: 0;
+        @include media-min(768px) {
+            width: calc((100% - 40px) / 3);
+            margin-right: 20px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        @include media-max(767px) {
+            max-width: 314px;
+            margin: 0 auto 35px auto;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 }

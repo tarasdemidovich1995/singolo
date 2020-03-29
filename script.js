@@ -13,8 +13,9 @@ window.slider = slider;
 
 const navList = document.querySelector('.navigation__list');
 const sections = document.querySelectorAll('section');
+const burgerButton = document.querySelector('.button_burger');
 
-const navigation = new Navigation(navList, sections);
+const navigation = new Navigation(navList, sections, burgerButton);
 window.navigation = navigation;
 
 const filterList = document.querySelector('.portfolio__filter-list');
