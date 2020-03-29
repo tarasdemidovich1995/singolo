@@ -4,7 +4,7 @@ export default class Navigation {
         this.navHeight = window.innerWidth >= 768 ? 95 : 71;
         this.cooldown = false;
         this.timerID = null;
-        this.sectionsCoords = this.getSectionsCoords(sections);
+        this.sections = sections;
         this.burgerButton = burgerButton;
         this.navigation = this.navList.parentElement;
         this.popup = this.navigation.parentElement;
@@ -14,9 +14,9 @@ export default class Navigation {
         window.onscroll = this.scrollHandler.bind(this);
     }
 
-    getSectionsCoords(sections) {
+    getSectionsCoords() {
         const coords = new Map([['home', 0]]);
-        sections.forEach(element => {
+        this.sections.forEach(element => {
             if (element.id) coords.set(element.id, element.offsetTop - this.navHeight);
         });
         return coords;
@@ -29,8 +29,9 @@ export default class Navigation {
         }, 800);
     }
     getSectionByCoord(coord) {
-        const coords = Array.from(this.sectionsCoords.values());
-        const sections = Array.from(this.sectionsCoords.keys());
+        const sectionsCoords = this.getSectionsCoords()
+        const coords = Array.from(sectionsCoords.values());
+        const sections = Array.from(sectionsCoords.keys());
         for (let i = coords.length - 1; i >= 0; i--) {
             if (coord >= coords[i]) return sections[i];
         }
@@ -47,7 +48,8 @@ export default class Navigation {
         this.removeActiveStyle();
         const link = event.target;
         const reference = link.href.match(/(?<=#)\w+$/g).toString();
-        const sectionCoord = this.sectionsCoords.get(reference);
+        const sectionsCoord = this.getSectionsCoords();
+        const coord = sectionsCoord.get(reference);
         link.classList.add('link_nav_active');
         if (this.cooldown) {
             clearInterval(this.timerID);
@@ -55,7 +57,7 @@ export default class Navigation {
         } else {
             this.setCooldown();
         }
-        window.scrollTo(0, sectionCoord);
+        window.scrollTo(0, coord);
     }
 
     scrollHandler() {

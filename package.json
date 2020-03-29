@@ -1,0 +1,27 @@
+{
+  "name": "singolo",
+  "version": "1.0.0",
+  "description": "[Link to task!](https://tarasdemidovich1995.github.io/singolo/)",
+  "main": "script.js",
+  "scripts": {
+    "style": "sass --watch styles/style.scss style.css",
+    "dev": "webpack --mode development",
+    "prod": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarasdemidovich1995/singolo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tarasdemidovich1995/singolo/issues"
+  },
+  "homepage": "https://github.com/tarasdemidovich1995/singolo#readme",
+  "devDependencies": {
+    "sass": "^1.26.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}
